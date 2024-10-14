@@ -20,7 +20,7 @@ def launchangletest():
 
 from Launch_Angle_Range import launch_angle_range
 def launchanglerangetest():
-    ve_v0 = 2.0
+    ve_v0 = 2.21
     alpha = 0.25
     tol_alpha = 0.02
     print(launch_angle_range(ve_v0, alpha, tol_alpha))

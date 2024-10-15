@@ -23,6 +23,9 @@ def launch_angle(ve_v0, alpha):
         raise ValueError(f"Negative ve_v0: {ve_v0}")
     if alpha < 0:
         raise ValueError(f"Negative alpha: {alpha}") 
+    k = 1-((alpha/(1+alpha))*(ve_v0**2))
+    if k < 0:
+        raise ValueError(f"Negative Squareroot value: {k}") 
     z = (1 + alpha)*np.sqrt(1-((alpha/(1+alpha))*(ve_v0**2)))
     result = arcsin(z)
     return result 

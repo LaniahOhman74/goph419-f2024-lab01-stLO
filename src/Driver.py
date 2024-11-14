@@ -50,12 +50,13 @@ def main():
     plt.xlabel('Altitude')
     plt.ylabel('Launch Angle')
     plt.legend()
+    plt.grid()
     plt.savefig('Figures/ Altitude_Ranges')
     plt.show()
 
     #Question Four
     #Exact same thing but now for a range of ve_v0 
-    ve_v0_range = np.arange(1.35,2.21,0.1)
+    ve_v0_range = np.arange(1.4,2.21,0.01)
     alpha = 0.25
     tol_alpha = 0.04
     #minimum launch angle list
@@ -74,6 +75,7 @@ def main():
     plt.xlabel('Velocity Ratio')
     plt.ylabel('Launch Angle')
     plt.legend()
+    plt.grid()
     plt.savefig('Figures/ Velocity_Ratio_Range')
     plt.show()
 

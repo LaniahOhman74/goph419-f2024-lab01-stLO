@@ -49,6 +49,18 @@ def launchanglerangetest():
     alpha = 0.25
     tol_alpha = 0.02
     print('Pass',launch_angle_range(ve_v0, alpha, tol_alpha))
+    #Manually determine values
+    vev0 = 2
+    a = 0.25
+    tol = 0.02
+    a_max = (1+tol)*a
+    a_min = (1-tol)*a
+    z_max = (1 + a_min)*np.sqrt(1-((a_min/(1+a_min))*(vev0**2)))
+    z_min = (1 + a_max)*np.sqrt(1-((a_max/(1+a_max))*(vev0**2)))
+    angle_min = np.arcsin(z_min)
+    angle_max = np.arcsin(z_max)
+    print(f'This is the expected minimum and maximum launch angles {angle_min,angle_max}')
+
 
 def launchanglerangetest1():
 #ve_v0 is negative, fails
